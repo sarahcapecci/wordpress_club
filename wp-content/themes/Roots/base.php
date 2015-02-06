@@ -1,4 +1,37 @@
 <?php get_template_part('templates/head'); ?>
+<style>
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+  .wrap {
+    padding: 0 40px;
+  }
+
+  .nav li {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .margin-t-20 {
+    margin: 20px 0;
+  }
+  .margin-t-10 {
+    margin: 10px 0;
+  }
+  .block {
+    display: block;
+  }
+
+  .pointer {
+    cursor: pointer;
+    color: blue;
+  }
+
+  #selected-dog {
+    display: none;
+  }
+  
+</style>
 <body <?php body_class(); ?>>
 
   <!--[if lt IE 8]>
@@ -13,15 +46,10 @@
   ?>
 
   <div class="wrap container" role="document">
-    <div class="content row">
+    <div class="content">
       <main class="main" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
